@@ -15,6 +15,7 @@ BuildRequires:  pkgconfig(graphene-gobject-1.0)
 BuildRequires:  pkgconfig(gtk4)
 BuildRequires:  pkgconfig(gtk4-layer-shell-0)
 BuildRequires:  pkgconfig(poppler-glib)
+BuildRequires:  pkgconfig(protobuf)
 
 %description
 A fast, customizable application launcher built with GTK4 and Rust, designed for Linux desktop environments. Walker provides a clean, modern interface for launching applications, running commands, performing c>
