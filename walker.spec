@@ -1,8 +1,8 @@
 %global debug_package %{nil}
 
 Name:           walker
-Version:        1.0.7
-Release:        2
+Version:        1.2.1
+Release:        1
 Source0:        https://github.com/abenz1267/walker/archive/v%{version}/%{name}-v%{version}.tar.gz
 Source1:        %{name}-%{version}-vendor.tar.gz
 Summary:        Multi-Purpose Launcher with a lot of features. Highly Customizable and fast
