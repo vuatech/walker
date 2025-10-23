@@ -1,7 +1,7 @@
 %global debug_package %{nil}
 
 Name:           walker
-Version:        2.2.0
+Version:        2.6.2
 Release:        1
 Source0:        https://github.com/abenz1267/walker/archive/v%{version}/%{name}-v%{version}.tar.gz
 Source1:        %{name}-%{version}-vendor.tar.gz
@@ -39,8 +39,26 @@ cargo build --release --offline --frozen
 
 %install
 install -Dpm755 target/release/%{name} %{buildroot}%{_bindir}/%{name}
+install -Dm 644 resources/config.toml -t "%{buildroot}/etc/xdg/walker"
+install -Dm 644 resources/themes/default/item.xml -t "%{buildroot}/etc/xdg/walker/themes/default"
+install -Dm 644 resources/themes/default/item_calc.xml -t "%{buildroot}/etc/xdg/walker/themes/default"
+install -Dm 644 resources/themes/default/item_clipboard.xml -t "%{buildroot}/etc/xdg/walker/themes/default"
+install -Dm 644 resources/themes/default/item_dmenu.xml -t "%{buildroot}/etc/xdg/walker/themes/default"
+install -Dm 644 resources/themes/default/item_files.xml -t "%{buildroot}/etc/xdg/walker/themes/default"
+install -Dm 644 resources/themes/default/item_providerlist.xml -t "%{buildroot}/etc/xdg/walker/themes/default"
+install -Dm 644 resources/themes/default/item_symbols.xml -t "%{buildroot}/etc/xdg/walker/themes/default"
+install -Dm 644 resources/themes/default/item_archlinuxpkgs.xml -t "%{buildroot}/etc/xdg/walker/themes/default"
+install -Dm 644 resources/themes/default/item_todo.xml -t "%{buildroot}/etc/xdg/walker/themes/default"
+install -Dm 644 resources/themes/default/item_unicode.xml -t "%{buildroot}/etc/xdg/walker/themes/default"
+install -Dm 644 resources/themes/default/layout.xml -t "%{buildroot}/etc/xdg/walker/themes/default"
+install -Dm 644 resources/themes/default/keybind.xml -t "%{buildroot}/etc/xdg/walker/themes/default"
+install -Dm 644 resources/themes/default/preview.xml -t "%{buildroot}/etc/xdg/walker/themes/default"
+install -Dm 644 resources/themes/default/style.css -t "%{buildroot}/etc/xdg/walker/themes/default"
+
+
 
 %files
 %license LICENSE
 %doc README.md
 %{_bindir}/%{name}
+%{_sysconfdir}/xdg/walker
