@@ -10,12 +10,12 @@ URL:            https://github.com/abenz1267/walker
 License:        GPL
 Group:          Window Manager/Utils
 
-BuildRequires:  cargo
-BuildRequires:  pkgconfig(graphene-gobject-1.0)
-BuildRequires:  pkgconfig(gtk4)
-BuildRequires:  pkgconfig(gtk4-layer-shell-0)
-BuildRequires:  pkgconfig(poppler-glib)
-BuildRequires:  pkgconfig(protobuf)
+#BuildRequires:  cargo
+#BuildRequires:  pkgconfig(graphene-gobject-1.0)
+#BuildRequires:  pkgconfig(gtk4)
+#BuildRequires:  pkgconfig(gtk4-layer-shell-0)
+#BuildRequires:  pkgconfig(poppler-glib)
+#BuildRequires:  pkgconfig(protobuf)
 
 Requires:       elephant
 
